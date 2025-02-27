@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!-- jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- owlCarousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <!-- noto sans tc-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css"/>
+    <!-- aos--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- swiper--><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha256-NiMdnMv0WBAps3M8mcB7WHzlanETt0rnwMCgg67DgCk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" integrity="sha256-kGupfJ4zZb4/m0GPPVY0ng7FwSjZm1E0wMWG1aRYbwk=" crossorigin="anonymous" />
+    <!-- gsap--><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha256-XDWrid8aGX+NZwSY7JzTu6oWArI71Sw+aUZ9Hd0P5mo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/TextPlugin.min.js" integrity="sha256-ueVAnnZLQzTgupbVzZ98US77GlFMzWhqWJ+i8oqO4O8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js" integrity="sha256-VOmGZIiFXM1EqfqanRqwQ/1JfzredGUMk/M6AAPMdRw=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollToPlugin.min.js" integrity="sha256-dIqkGRmOeTpe7Zxq1vdIDcQonrVWrzXHo1tRuo5fEr0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/PixiPlugin.min.js" integrity="sha256-A9jCDXQhTsPDKUP8/HHoRBI9MKpRJmjKalOnqt3PBXY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/MotionPathPlugin.min.js" integrity="sha256-3qQZGNeXc42t1E5iyn5XA92eBXFJevVtshE8aWBE0Xs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/EaselPlugin.min.js" integrity="sha256-eQgQne4nbpnHXQAgqqkIz/bUmdYbUUyJxV9OXS1XCpo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/EasePack.min.js" integrity="sha256-YYZMCUSiShKxzX6n63C7BBttMsgswc/NkXc4WdCK/ro=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/CSSRulePlugin.min.js" integrity="sha256-c73GnBat1qBHmg9/ttdWrVUwzwj5U8MVqacscUi1tGY=" crossorigin="anonymous"></script>
+    <!-- fancy-box--><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
+    <script src="https://unpkg.com/vue"></script>
+    <!-- user defined-->
+    <link rel="stylesheet" href="dist/css/usercss.css"/>
+    <script src="dist/js/userjs.js"></script>
+    <link rel="SHORTCUT ICON" href="images/favicon-32x32.png" type="image/x-icon"/>
+    <title>豐禾邑記帳事務所</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <!-- LOGO放置處--><a class="navbar-brand svg" href="/" style="background: url(images/logo.svg); width: 266px; height: 22px;"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li data-aos="fade-in"><a href="">關於我們</a></li>
+            <li data-aos="fade-in"><a href="">企業貸款</a></li>
+            <li data-aos="fade-in"><a href="">輔導記帳報稅</a></li>
+            <li data-aos="fade-in"><a href="">服務公司</a></li>
+            <li data-aos="fade-in"><a href="">行號設立</a></li>
+            <li data-aos="fade-in"><a href="">聯絡我們        </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="banner container-fluid" id="banner">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="owl-carousel">
+            <div class="item"><img class="hidden-xs" src="images/banner.png" alt=""/><img class="visible-xs" src="images/banner-m.png" alt=""/></div>
+            <div class="item"><img class="hidden-xs" src="images/banner.png" alt=""/><img class="visible-xs" src="images/banner-m.png" alt=""/></div>
+            <div class="item"><img class="hidden-xs" src="images/banner.png" alt=""/><img class="visible-xs" src="images/banner-m.png" alt=""/></div>
+            <div class="item"><img class="hidden-xs" src="images/banner.png" alt=""/><img class="visible-xs" src="images/banner-m.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="idx container-fluid section-1" id="section-1">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="text-center">企業貸款輔導</h3>
+          <p class="text-center">聘請銀行退休專業顧問人員，針對企業進行SWOT 分析，為企業資金融通服務做整體規劃。</p>
+        </div>
+      </div>
+      <div class="row info" style="background-color: #f5f3f0;">
+        <div class="col-sm-4 col-xs-12">
+          <figure><img class="img-responsive center-block" src="images/section-1-img-1.png" alt=""/>
+            <figcaption>
+              <h4>中小企業辦理銀行融資</h4>
+              <p>依據企業需求．評估適合的融資方案</p>
+              <p>提供備財務報表、簽證計畫．提高核貸成功率</p>
+              <p>申請企業信用貸款、設備貨款、週轉金貸款</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <figure><img class="img-responsive center-block" src="images/section-1-img-2.png" alt=""/>
+            <figcaption>
+              <h4>債務協商</h4>
+              <p>分析企業或個人財務狀況 •提供最佳還款方案</p>
+              <p>降低利率或延長還款期限</p>
+              <p>維持信用紀錄</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <figure><img class="img-responsive center-block" src="images/section-1-img-3.png" alt=""/>
+            <figcaption>
+              <h4>紓困貸款</h4>
+              <ul>
+                <li>針對短期資金需求．協助中小企業政府及銀行紓困方案</li>
+                <li>快速評估質軟條件．縮短申請流程</li>
+                <li>提供貨金規制建議，提升企業抗風險能力</li>
+              </ul>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <p class="text-center"><a class="svg" style="background:url(images/section-1-detail.svg); width: 147px; height: 31px;"></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="idx container-fluid section-2" id="section-2">
+      <div class="row">
+        <div class="col-sm-6 col-x-s-12">
+          <h3>關於豐禾邑</h3>
+          <p>營登 / 報稅 / 節稅 / 銀行貸款</p>
+          <p>設立公司大小事 交豐禾邑最省事</p>
+          <p>老闆用力打拼經濟  合法節稅豐禾邑記</p>
+          <p>豐禾邑提供 企業貸款輔導/工商設立、變更登記/申請工商憑證/記帳稅務申報</p>
+          <p>全台灣地區皆可為您服務！</p>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <ul>
+            <li class="text-center"><a href="">工商設立服豬<span class="svg" style="background:url(images/section-2-arrow.svg); width: 30px; height: 30px;"></span></a></li>
+            <li class="text-center"><a href="">中小企業银行融資<span class="svg" style="background:url(images/section-2-arrow.svg); width: 30px; height: 30px;"></span></a></li>
+            <li class="text-center"><a href="">商標專利申請<span class="svg" style="background:url(images/section-2-arrow.svg); width: 30px; height: 30px;"></span></a></li>
+            <li class="text-center"><a href="">配合會計師簽證<span class="svg" style="background:url(images/section-2-arrow.svg); width: 30px; height: 30px;"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="idx container-fluid section-3">
+      <div class="row">
+        <div class="col-sm-12 col-xs-12">
+          <h3 class="text-center">記帳報稅服務</h3>
+          <h4 class="text-center">秉持專業態度，為客戶合法節稅。豐禾邑運用多年專業經驗做到最好</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <figure><img class="img-responsive center-block" src="images/section-3-img-1.png" alt=""/>
+            <figcaption> 
+              <h4>各項代書業務</h4>
+              <p>供協助設立公司及公司相關登記的服務</p>
+              <p>公司章程草擬：協助撰寫公司章程、股東協議、董事會決議等文件。</p>
+              <p>公司登記：代理客戶進行公司設立登記、商業登記及資本驗證。</p>
+              <p>股權變更：協助辦理股東、董事或高層人員的變更登記。</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <figure><img class="img-responsive center-block" src="images/section-3-img-2.png" alt=""/>
+            <figcaption>
+              <h4>記帳報稅服務</h4>
+              <p>一般行業記帳服務$2,000/月;特許行業:另議</p>
+              <p>※【營業額未達300萬】另有優惠，歡迎來電洽詢</p>
+              <p>費用，隨同當期記帳費一併收取※上述報價為年營業額1000萬以下採書面審核申報之報價，超過及查帳另議。</p>
+              <p>※以上報價不含成本表單（進銷存貨明細表等）製作及其他非例行性事務處理。</p>
+              <p>※發票費用: 按照實際代購費用，隨同當期記帳費一併收取</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <figure><img class="img-responsive center-block" src="images/section-3-img-3.png" alt=""/>
+            <figcaption> 
+              <h4>委託記帳介紹</h4>
+              <p>◎代購、到府收送統一發票。</p>
+              <p>◎傳票編制、各項帳簿設置、各項報表編制。</p>
+              <p>◎定期提供預估損益建議書、稅務資訊。</p>
+              <p>◎ 辦理營業稅申報。</p>
+              <p>◎ 辦理薪資、租金及各類所得之扣繳憑單申報。</p>
+              <p>◎ 辦理公司盈餘分配之股利憑單申報。</p>
+              <p>◎ 辦理營利事業所得稅預估暫繳申報。</p>
+              <p>◎ 辦理營業事業所得稅年度結算申報。</p>
+              <p>◎ 辦理個人綜合所得稅申報。</p>
+              <p>◎ 提供暫結報表供銀行融資。			</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="idx container-fluid section-4" id="section-4" style="background:#22303c;">
+      <div class="row">
+        <h3 class="text-center">公司行號設立</h3>
+        <h4 class="text-center">簡單、快速、有效率。豐禾邑以最快時間為您服務 !</h4>
+      </div>
+      <div class="row info">
+        <div class="col">
+          <figure><img class="img-responsive center-block" src="images/section-4-img-1.png" alt=""/>
+            <figcaption> 
+              <h4>工商設立變更登記</h4>
+              <p>應備文件</p>
+              <p>負責人、各股東身份證正反面影本</p>
+              <p>最近一期房屋稅單影本</p>
+              <p>租賃合約影本或房屋使用同意書</p>
+              <p>提供２個想要設立公司的名稱</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure><img class="img-responsive center-block" src="images/section-4-img-2.png" alt=""/>
+            <figcaption> 
+              <h4>工廠設立變更登記</h4>
+              <p>協助製造業者辦理工廠設立、變更及登記相關手續，確保符合政府規範，合法經營。</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure><img class="img-responsive center-block" src="images/section-4-img-3.png" alt=""/>
+            <figcaption> 
+              <h4>僑外投資申請</h4>
+              <p>提供協助準備申請文件及提交申請與公司登記</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure><img class="img-responsive center-block" src="images/section-4-img-4.png" alt=""/>
+            <figcaption> 
+              <h4>境外公司申請</h4>
+              <p>提供協助準備適合註冊地點及設立公司</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure><img class="img-responsive center-block" src="images/section-4-img-5.png" alt=""/>
+            <figcaption> 
+              <h4>特許業務申請</h4>
+              <p>專業辦理公司、行號設立，從名稱查核、章程擬定到營業登記，全程輔導，讓您快速開業。</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-xs-12">
+          <p class="text-center"><a class="svg" style="background:url(images/section-4-detail.svg); width: 147px; height: 31px;"></a></p>
+        </div>
+      </div>
+    </div>
+    <footer class="foot" id="foot" style="background-color: #22303c;">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12 logo-content"><span class="svg" style="background:url(images/foot-logo.svg); width: 266px; height: 54px;"></span></div>
+        <div class="col-sm-4 col-xs-12 info">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <p>電話：<a href="tel: (04)8870255">(04)8870255</a></p>
+              <p>傳真：<a href="tel: (04)8870265">(04)8870265</a></p>
+              <p>行動：<a href="tel: 0937-766565">0937-766565</a></p>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <p>地址：5220 彰化縣田尾鄉溪畔村中山路二段484號</p>
+              <p>信箱：<a href="mailto: huangchi6896@gmail.com">huangchi6896@gmail.com</a></p>
+              <p>LINE ID：<a href="https://line.me/R/ti/p/%400937766565">0937766565</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="design" style="background-color: #22303c;">
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="text-center"><span>Copyright © 2025 豐禾邑商務記帳事務所 </span><span>All rights reserved.</span><a href="http://www.e-creation.com.tw" target="_blank">Design by 藝創媒體</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="right"><a class="svg gotop" href="javascript: void(0);" style="background:url(images/gotop.svg); width: 50px; height: 50px;"></a></div>
+  </body>
+</html>
