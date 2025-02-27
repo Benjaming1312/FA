@@ -1,0 +1,360 @@
+.module-sublist
+  display: none
+
+// body.page_mobile_meccg,
+// body.page_mobilercglist
+//   .module-adv
+//     margin-top: 160px
+//     @media #{$mobile}
+//       margin-top: 120px
+
+.shop-list
+  +max-width
+  // margin-top: 160px
+  @media screen and (min-width: 768px)
+    margin-bottom: 30px
+  @media #{$mobile}
+    // margin-top: 120px
+    padding: 0 15px
+
+  .product-banner
+    margin-bottom: 30px
+  // &.with_banner
+  //   margin-top: 30px
+  //   @media #{$mobile}
+  //     margin-top: 15px
+  >.row
+    @media screen and (min-width: 768px)
+      margin: 0px
+      max-width: initial
+    @media #{$mobile}
+      display: flex
+      flex-wrap: wrap
+  #pageptlist
+    @media screen and (min-width: 768px)
+      margin: 0 -5px
+  .module-ptlist
+    @media #{$pad-horizantal}
+      padding: 0
+    @media #{$pad-vertical}
+      padding: 0
+  .mpgdetail
+    @media #{$mobile}
+      padding: 0
+  &.show
+    aside.col-sm-3
+      @media #{$mobile}
+        transform: translateX(0px)
+  $aside: 300px
+  aside
+    padding-left: 0
+    padding-right: 0
+    @media screen and (min-width: 768px)
+      width: $aside
+    &.col-sm-3
+      @media #{$mobile}
+        +trans
+        margin-bottom: 15px
+        position: fixed
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        background: white
+        z-index: 99999
+        padding: 0
+        transform: translateX(-100%)
+        overflow: auto
+        overscroll-behavior: contain
+    *
+      color: #5a4a42
+    .title
+      font-size: 16px
+      font-weight: bold
+      border-bottom: 1px solid #948380
+      padding-bottom: 7.5px
+      margin-bottom: 15px
+      color: #948380
+    >.panel-group
+      >.panel
+        >.panel-heading
+          background: #eeebeb
+          a
+            font-size: 16px
+        >.panel-collapse
+          >.panel-body
+            padding-left: 15px
+            >.panel-group
+              .panel-heading
+                padding-top: 0
+                border: 0
+                position: relative
+                &::before
+                  content: ''
+                  display: inline-block
+                  width: 5px
+                  height: 5px
+                  border-radius: 50%
+                  background: $color-b
+                  position: absolute
+                  left: -7.5px
+                  top: 9px
+              >.panel
+                padding-left: 5.5px
+                >.panel-collapse
+                  >.panel-body
+                    >.panel-group 
+                      li
+                        padding-left: 0
+                        &::before
+                          display: none
+
+    .panel
+      border: 0
+      box-shadow: none
+      background: none
+      border-radius: 0
+    .panel-heading
+      background: none
+      border: 0
+      padding-left: 7.5px
+      padding-right: 7.5px
+      color: #666
+      border-bottom: 1px solid #e7f0f5
+      @media #{$mobile}
+        padding-top: 5px
+        padding-bottom: 5px
+      .panel-title
+        +trans
+        padding-left: 0
+        a
+          font-size: 16px
+          border: 0
+          &.active
+            color: #5a4a42
+            &+a
+              .fa
+                color: #5a4a42
+        a:first-child
+          &.active
+            &::before
+              margin-right: 22.5px
+          &+a
+            margin-left: 7.5px
+            float: right
+            .fa
+              &::before
+                content: '\f068'
+            &.collapsed
+              .fa
+                &::before
+                  content: '\f067'
+
+        &:hover
+          a:first-child
+            &::before
+              margin-right: 22.5px
+    >p
+      padding: 10px 15px
+      padding-left: 0
+      margin-bottom: 0
+      border-bottom: 1px solid #666
+      a
+        font-size: 16px
+        color: #666
+      +trans
+      &:hover
+        padding-left: 15px
+    .panel-body
+      padding-left: 7.5px
+      padding-right: 0
+      padding-bottom: 0
+      @media #{$mobile}
+        padding-top: 7.5px
+      ul
+        padding-left: 0
+        list-style: none
+        margin-bottom: 15px        
+        @media #{$mobile}
+          margin-bottom: 0
+      li
+        margin-bottom: 15px
+        position: relative
+        padding-left: 12.5px
+        @media #{$mobile}
+          margin-bottom: 7.5px
+        &::before
+          content: ''
+          display: inline-block
+          width: 5px
+          height: 5px
+          border-radius: 50%
+          background: $color-b
+          position: absolute
+          left: -2.5px
+          top: 9px
+        a
+          font-size: 16px
+          border: 0
+          display: block
+          +trans
+          &:hover, &.active
+            padding-left: 7.5px
+            color: #000
+            font-weight: bold
+  .toggle_btn
+    a
+      background: $color-blue
+      color: white
+      padding: 3.25px 15px
+      border-radius: 15px
+      font-size: 14px
+
+  main.col-sm-9
+    @media screen and (min-width: 768px)
+      width: calc(100% - #{$aside})
+      padding-left: 40px
+.module-cglist.module-cglist.module-cglist
+  .mt
+    padding-bottom: 0
+    margin-bottom: 0
+    h3
+      text-align: left
+      width: 100%
+      border-color: #5A4A42
+      color: #5A4A42
+      line-height: 50px
+      margin-top: -5px
+.module-meccglist,
+.module-
+  .mt
+    h3
+      color: #5A4A42
+      border-color: #ccc
+      border-width: 1px
+      font-weight: bold
+      padding-left: 0px
+      margin-bottom: 15px
+      font-weight: 500
+      @media #{$mobile}
+        padding-right: 0
+.module-ptlist,
+.module-,
+.module-relate
+  @media #{$pad-vertical}
+    padding: 0 30px
+  @media #{$pad-horizantal}
+    padding: 0 30px
+  .mb
+    padding-top: 0
+  .listBS
+    display: flex
+    flex-wrap: wrap
+    @media #{$pad-vertical}
+      flex-wrap: wrap
+    @media #{$pad-horizantal}
+      flex-wrap: nowrap
+    @media #{$mobile}
+      margin: 0
+  .d-item
+    margin-bottom: 7.5px
+    cursor: pointer
+    background: none
+    +trans
+    @media screen and (min-width: 768px)
+      margin-bottom: 30px
+    @media #{$mobile}
+      margin-bottom: 30px
+      padding-left: 0
+      padding-right: 0
+      width: 50%
+    &:hover
+      opacity: 0.7
+      .d-txt
+        @media screen and (min-width: 768px)
+          opacity: 1
+    .mbox
+      position: relative
+      height: 100%
+      padding: 0
+      @media #{$mobile}
+        padding: 0px
+    a
+      border: 0
+    .d-img
+      position: relative
+      overflow: hidden
+      padding: 7.5px
+      background: #eeebeb
+      +trans
+      a
+        padding-top: 100%
+        background-size: cover!important
+        background-repeat: no-repeat!important
+        background-position: center!important
+      img
+        max-width: 100%
+        +trans
+    .d-txt
+      @media #{$mobile}
+        opacity: 1
+        background: none
+      h5
+        padding-left: 0
+        text-align: center
+        margin-top: 15px
+        margin-bottom: 0px
+        color: $color-b
+        a
+          font-size: 18px
+          font-weight: bold
+          font-family: sans-serif!important
+          color: #5A4A42
+          +trans
+          letter-spacing: 0
+          @media #{$mobile}
+            font-size: 17px
+      .mdetail
+        font-size: 17px
+        color: #00518c
+        font-weight: bold
+        line-height: 25px
+        text-align: center
+        @media #{$mobile}
+          font-size: 14px
+    .mpro-price
+      text-align: center
+      margin-top: 7.5px
+      span
+        color: $color-b
+        font-size: 16px
+        font-weight: bold
+        &.mpri-val
+          color: $color-red
+          font-size: 16px
+          letter-spacing: 0
+      .oriprice
+        span
+          color: #777
+          font-weight: 500
+    .mpro-btns
+      margin-top: 15px
+      text-align: center
+      .mbtn
+        white-space: nowrap
+        @media #{$pad-horizantal}
+          padding-left: 15px
+          padding-right: 15px
+        @media #{$pad-vertical}
+          padding-left: 15px
+          padding-right: 15px
+        @media #{$mobile}
+          white-space: nowrap
+          padding-left: 15px
+          padding-right: 15px
+
+.fancybox-container
+  *
+    color: white!important
+  svg
+    fill: white!important

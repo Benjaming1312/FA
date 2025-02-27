@@ -1,15 +1,30 @@
 =text
-  color: #00559c
+  color: white
   font-size: 17px
   font-weight: 500
-  letter-spacing: 0.2rem
+  letter-spacing: 0rem
+=sub_text
+  font-size: 14px
+  color: white
+  font-weight: 500
+  letter-spacing: 0
+  +trans
+  &:hover
+    background: none
+    opacity: 0.6
 
-.navbar.navbar.navbar .navbar-nav
+
+.navbar.navbar.navbar #navbar > .navbar-nav
   >li
-    margin: 0 2vw
+    margin: 0
     // &:hover
     &.logo
+      @media screen and (min-width: 768px)
+        margin-top: -20px
+        margin-left: 0
+        margin-right: 0
       a
+        padding: 0
         &::after
           display: none
     a
@@ -28,26 +43,13 @@
       +text
       +trans
       @media screen and (min-width: 768px)
-        padding: 0 30px // 選單間距
-        padding-bottom: 7.5px
+        padding: 0 0px // 選單間距
+        padding-bottom: 0px
         position: relative
         top: 3.25px
       @media #{$mobile}
-        padding: 15px 0
+        padding: 7.5px 0
         text-align: center
-      // &::after
-      //   @media screen and (min-width: 768px)
-      //     content: ''
-      //     +tr3($color-n, $color-n, $color-blue, $color-n)
-      //     border-width: 0 5px 12.5px 5px
-      //     padding: 0
-      //     margin: 0
-      //     position: absolute
-      //     bottom: -7.5px
-      //     left: calc(50% - 2.5px)
-      //     opacity: 0
-      //     transform: translateY(10px)
-      //     +trans
       &:hover
         &::after
           transform: translateY(0)
@@ -63,30 +65,24 @@
       background: none // Clear mshop default
       min-width: initial // Clear mshop default
       border-radius: 0
-      width: 100%
+      padding: 15px
       @media screen and (min-width: 768px)
         +box-shadow
-        background: rgba(#231f20, .78)
+        top: 30px
+        background: url(#{$url}navbar-bg.png)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
       @media #{$mobile}
-        background: rgba(#231f20, .1)
+        background: rgba(white, .3)
       >li
         >a
           padding: 0 // Clear mshop default
           background: none // Clear mshop default
-          +text
+          +sub_text
           padding: 7.5px 0
           text-align: center
           +trans
-          font-size: 14px
-          color: white
-          @media #{$mobile}
-            color: #231f20
-          &:hover
-            background: #ccc
-            color: #231f20
-            @media #{$mobile}
-              background: #231f20
-              color: #ccc
 
 // .navbar-nav
 //   & > li

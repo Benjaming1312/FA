@@ -1,80 +1,27 @@
-.navbar.navbar.navbar
-  .user-profile
-    display: flex
-    flex-wrap: nowrap
+.navbar.navbar.navbar.navbar
+  .profile
     @media screen and (min-width: 768px)
       position: absolute
-      top: 15px
-      right: 15px
-    @media #{$mobile}
-      margin-top: 15px
-      margin-bottom: 7.5px
-      text-align: center
-    .svg
-      margin: 0 7.5px
-    a
-      +trans
-      &:hover
-        opacity: 0.7
-    .lang
-      margin-right: 15px
-      display: inline-flex
-      align-items: center
-      .svg
-        margin-right: 7.5px
-        max-width: 17px
-        max-height: 17px
+      left: 15px
+      top: -10px
+      z-index: 3
+    ul
+      display: flex
+      flex-wrap: nowrap    
+      @media #{$mobile}
+        justify-content: center
+    li
+      margin: 0
+      &:last-child
+        a::after
+          display: none
       a
-        +text
-        font-size: 14px
-        &:last-child
-          &::before
-            content: '|'
-            +text
-            display: inline-block
-            margin: 0 7.5px
-            font-size: 14px
-
-// .member.member
-//   position: absolute
-//   right: 0px
-//   top: 7.5px
-//   width: 150px
-//   @media screen and (min-width: 768px)
-//     display: flex
-//     flex-wrap: wrap
-//     flex-direction: column-reverse
-//   @media #{$mobile}
-//     display: flex
-//     flex-wrap: wrap
-//     flex-direction: column
-//     position: static
-//     width: 100%
-//     padding: 7.5px 0 0
-//   .formBS
-//     width: 100%
-// .user-append
-//   width: 80%
-//   display: flex
-//   flex-wrap: nowrap
-//   justify-content: center
-//   .svg
-//     min-width: 20px
-//     min-height: 20px
-//     margin: 0 15px
-
-// .user-append.visible-xs
-//   position: fixed
-//   bottom: 0
-//   left: 0
-//   width: 100%
-//   z-index: 100
-//   background: rgba(#968d85, .9)
-//   .list-inline
-//     display: flex
-//     flex-wrap: nowrap
-//     margin: 0
-//     li
-//       width: calc(100% / 3)
-//       text-align: center
-//       padding: 7.5px 0
+        +sub_text
+        margin: 0
+        padding: 0
+        border: 0
+        &::after
+          content: '|'
+          +text
+          display: inline-block
+          margin: 0 7.5px

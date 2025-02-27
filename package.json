@@ -10,12 +10,15 @@
     "gulp": "gulp"
   },
   "dependencies": {
+    "browserify": "^17.0.0",
     "cssnano": "^4.1.10",
     "gulp-compass": "^2.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-pug": "^4.0.1",
+    "gulplog": "^1.0.0",
     "jquery": "^3.5.1",
     "rollup": "^2.11.2",
+    "vinyl-buffer": "^1.0.1",
     "vue": "^2.3.3"
   },
   "devDependencies": {
@@ -37,7 +40,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "pug-bootstrap": "0.0.15",
     "rollup-plugin-terser": "^6.1.0",
     "vinyl-source-stream": "^2.0.0",

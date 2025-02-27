@@ -53,29 +53,31 @@ div.header
     margin-left: auto
     margin-right: auto
   .mt
-    h3
-      border: 0
-      @media #{$mobile}
-        margin-bottom: 15px
+    margin-top: 0
+    margin-bottom: 0
+    // h3
+    //   border: 0
+    //   @media #{$mobile}
+    //     margin-bottom: 15px
   .form-btn
     margin-top: 30px
   .mbtn,
   .btn
     font-size: 16px
-  //   background: $color-brown-l
-  //   border-color: $color-brown-l
+  //   background: $color-blue
+  //   border-color: $color-blue
   //   color: white
   //   display: inline-flex
   //   align-items: center
   //   justify-content: center
   //   &:hover
-  //     color: $color-brown-l
+  //     color: $color-blue
   //     background: none
   // a:focus
-  //   color: $color-brown-l
+  //   color: $color-blue
   // .mfield.eccons-name.eccons-name
   //   *
-  //     background: $color-brown-l
+  //     background: $color-blue
 
 .mbtn,
 .btn
@@ -140,14 +142,20 @@ div.header
     padding-right: 15px
 
 .mecmemcouponlist,
-.mecrequirerecord
+.mecrequirerecord,
   display: none
+
+.module-consignee,
+.module-orderlist,
+.module-viewcart
+  .mt
+    display: none
 
 .list-group-item
   a
     +trans
     &:hover
-      background: $color-brown-l
+      background: $color-blue
       color: white
 
 .module-billto
@@ -183,14 +191,14 @@ div.header
   .mbtn
     +btn
     width: 150px
-    background: $color-brown-l
-    border-color: $color-brown-l
+    background: $color-blue
+    border-color: $color-blue
     color: white
     &:hover
-      color: $color-brown-l
+      color: $color-blue
       background: none
       span
-        color: $color-brown-l
+        color: $color-blue
     span
       color: white
 .mcart-operate.mcart-operate
@@ -216,7 +224,7 @@ div.header
 
 .ecconsignee-list .consignee-info 
   // .mfield.eccons-name.eccons-name.eccons-name
-    background: $color-brown-l
+    background: $color-blue
     *
       color: white
       margin-bottom: 0
@@ -253,7 +261,7 @@ div.header
 
 .showother ul > li.active,
 .ecpay-list ul > li.active > div
-  border-color: $color-brown-l
+  border-color: $color-blue
 .ecorder-form .showother > .mbox > div[class$="-add"] .form-btn .mbtn-top
   white-space: nowrap
 
@@ -268,7 +276,7 @@ div.header
     font-weight: 600
     font-size: 18px
     line-height: 25px
-    border-left: 5px solid $color-brown-l
+    border-left: 5px solid $color-blue
     color: #535353
     padding-left: 7.5px
 
@@ -320,7 +328,7 @@ div.header
 
 .mpopdiv
   @media #{$mobile}
-    top: 120px
+    top: 0px
   .mt
     border: 0
     margin-bottom: -30px
@@ -329,17 +337,29 @@ div.header
       white-space: nowrap
   .module-login
     margin-top: 0
+    @media screen and (min-width: 768px)
+      padding-bottom: 0
   .btn-toggle.close
     position: absolute
+    top: 7.5px
   &#_pop_login
     .mbox
       height: auto
   //   height: auto
 
 .module-cglist,
-.module-rcglist,
+.module-rcglist
   .mt
     display: none
+.module-billto
+  >.mt
+    display: none
+  .mt
+    margin-bottom: 0
+    padding-bottom: 0
+.module-meccglist
+  .mt
+    display: block
 
 .mb
   padding-top: 0
@@ -366,6 +386,9 @@ div.header
 
 #mecbillto .module-ecconsignee .consignee-btn-add
   white-space: nowrap
+  @media screen and (min-width: 768px)
+    width: 200px
+    top: 12.5px
 
 .module-ecconsignee .ecconsignee-add
   height: auto!important
@@ -375,6 +398,16 @@ div.header
 
 .row.login-other
   margin-top: 15px
+  display: flex
+  justify-content: center
+  @media #{$mobile}
+    flex-wrap: wrap
+  a
+    text-align: center
+    margin: 0 30px
+    white-space: nowrap
+    @media #{$mobile}
+      margin-bottom: 15px
 
 .uitable-th,
 .mcart-operate
@@ -421,12 +454,63 @@ div.header
       //   *
       //     text-align: right!important
 
-.page_mobile_meccart
-  padding-bottom: 93px
-.page_mobile_mecbillto
-  padding-bottom: 113px
-.mcart-operate
-  bottom: 40px
+// .page_mobile_meccart
+//   padding-bottom: 93px
+// .page_mobile_mecbillto
+//   padding-bottom: 113px
+// .mcart-operate
+//   bottom: 40px
 
-.share-type
+.share-type,
+.module-forgetpsw .mt
   display: none
+
+.module-ecconsignee.module-ecconsignee.module-ecconsignee
+  border-top: 1px solid #ddd
+  border-bottom: 1px solid #ddd
+  padding: 15px 0
+.ecorder-form .module-ecconsignee .consignee-btn-add[style="display: none;"] + .ecconsignee-add,
+.afterservice ul[class*="-list"] div[class*="-details"], div[class$="history"] ul[class*="-list"] div[class*="-details"]
+  z-index: 99999
+.ecorder-form .module-ecconsignee .consignee-btn-add[style="display: none;"] + .ecconsignee-add[style*="opacity: 1"] + .ecconsignee-list:before
+  z-index: 99998
+
+.module-.module-
+  max-width: 1200px!important
+  @media screen and (min-width: 768px)
+    margin-bottom: 30px
+  .listBS
+    margin: 0 -7.5px
+  .d-item
+    padding: 3.25px
+
+.ecorder-add
+  padding-top: 0
+  @media #{$mobile}
+    padding-top: 60px
+.control-label
+  display: block
+  width: 100%
+  &+.col-sm-9
+    width: 100%
+    max-width: initial!important
+
+#_pop_login
+  z-index: 99999
+.module-ecconsignee .showother.open .consignee-btn-add
+  @media #{$mobile}
+    width: 90%
+    border-radius: 15px
+    left: 5%
+    height: 60px
+    bottom: 10px
+  span
+    @media #{$mobile}
+      font-weight: bold
+      font-size: 18px
+.artctrl
+  display: none
+
+.module-consignee .ecconsignee-add.show, .consignee-edit.show
+  @media #{$mobile}
+    z-index: 99999

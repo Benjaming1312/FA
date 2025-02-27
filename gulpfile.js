@@ -10,13 +10,16 @@ const
 	pug = require('gulp-pug') //pug
 	compass = require('gulp-compass') //compass
 	connect = require('gulp-connect') //connect
-	browserify = require('gulp-browserify')
+	browserify = require('browserify')
 	// rollupStream = require('@rollup/stream')
 	// source = require('vinyl-source-stream')
 	// terser = require('rollup-plugin-terser')
 	del = require('del')
 	plumber = require('gulp-plumber')
 	exec = require('child_process').exec
+	buffer = require('vinyl-buffer')
+	source = require('vinyl-source-stream')
+	log = require('gulplog')
 
 
 	gulp.task('clean', function() {
@@ -42,26 +45,41 @@ gulp.task('connect',function(){
 gulp.task('default',['clean', 'watch','connect']) //gulp 直接執行
 
 const base_domain = 'benjaming1312.github.io/huang'
-const js_path = '/dist/js'
 const css_path = '/dist/css'
+const js_path = '/dist/js'
 // 執行轉換JS
 gulp.task('scripts',function(){
-	gulp.src('gulp/js/userjs.js') //輸入路徑 **代表路徑的所有檔案轉換
+	const b = browserify({
+		entries: 'gulp/js/userjs.js',
+		debug: true
+	})
+	// gulp.src('gulp/js/userjs.js') //輸入路徑 **代表路徑的所有檔案轉換
+		b.bundle() //輸入路徑 **代表路徑的所有檔案轉換
 			.pipe(plumber())
-			.pipe(sourceMap.init())
-			.pipe(browserify())
-			.pipe(babel({
-					presets: ['env']
-			}))
-			.pipe(concat('userjs.js')) //合併所有JS產出為userjs.js
-			.pipe(uglify()) //最小化JS
-			.pipe(sourceMap.write('.', {
-				includeContent: false,
-				sourceRoot: 'gulp/js'
-			}))
+			.pipe(source('userjs.js'))
+			.pipe(buffer())
+			.pipe(sourceMap.init({loadMaps: true}))
+					// Add transformation tasks to the pipeline here.
+					.pipe(uglify())
+					.on('error', log.error)
+			.pipe(sourceMap.write('./'))
 			.pipe(gulp.dest(`dist/${base_domain}${js_path}`)) //翻譯後的路徑
 			.pipe(gulp.dest('dist/js')) //輸出路徑
-			.pipe(connect.reload())
+			// .pipe(plumber())
+			// // .pipe(sourceMap.init())
+			// // .pipe(browserify())
+			// .pipe(babel({
+			// 		presets: ['env']
+			// }))
+			// .pipe(concat('userjs.js')) //合併所有JS產出為userjs.js
+			// .pipe(uglify()) //最小化JS
+			// .pipe(sourceMap.write('.', {
+			// 	includeContent: false,
+			// 	sourceRoot: 'gulp/js'
+			// }))
+			// .pipe(gulp.dest(`dist/${base_domain}${js_path}`)) //翻譯後的路徑
+			// .pipe(gulp.dest('dist/js')) //輸出路徑
+			// .pipe(connect.reload())
 })
 
 // // // 轉換sass
