@@ -1,0 +1,123 @@
+- var url = '/ezfiles/811/1811/img/776/'
+- 
+  var list = [
+    {
+      id: 1,
+      label: '醫療床專區',
+      link: '/m/2000-1777-4315.php',
+      children: [
+        {
+          id: 1,
+          label: '三馬達電動床',
+          link: "/m/2000-1777-4309.php"
+        },
+        {
+          id: 2,
+          label: '二馬達電動床',
+          link: "/m/2000-1777-4310.php"
+        },
+        {
+          id: 3,
+          label: '一馬達電動床',
+          link: "/m/2000-1777-4311.php"
+        },
+        {
+          id: 4,
+          label: '復健式電動床',
+          link: "/m/2000-1777-4312.php"
+        },
+        {
+          id: 5,
+          label: '周邊商品',
+          link: "/m/2000-1777-4313.php"
+        },
+        {
+          id: 6,
+          label: '電動床比較表',
+          link: "/m/2000-1777-4314.php"
+        }
+      ]
+    },
+    {
+      id: 2,
+      label: '銀髮專區',
+      link: '/m/2000-1777-4316.php',
+      children: [
+        {
+          id: 1,
+          label: '三馬達電動床',
+          link: "/m/2000-1777-4317.php"
+        },
+        {
+          id: 2,
+          label: '二馬達電動床',
+          link: "/m/2000-1777-4318.php"
+        }
+      ]
+    }
+  ]
+
+//- =panel(propList, idx, path)
+  //- each item, idx in propList
+  //-   .panel-group(id="#accordion" + idx)
+        //- .panel.panel-default
+        //-   .panel-heading
+        //-     .panel-title
+        //-       a(href="/m/2000-1813-1240.php") HEAD
+        //-       a.collapsed(data-toggle="collapse" data-parent="#accordion" + idx href="#collapse-1")
+        //-         .fa.fa-plus
+        //-   #collapse-1.panel-collapse.collapse
+        //-     .panel-body
+
+
+//- .page.container-fluid.product-list
+//-   .row
+//-     aside.col-sm-3.col-xs-12
+//-       each parent, pidx in list
+
+
+//-         //- .panel-group(id="#accordion" + pidx)
+//-         //-   .panel.panel-default
+//-         //-     .panel-heading
+//-         //-       .panel-title
+//-         //-         a(href="/m/2000-1813-1240.php") HEAD
+//-         //-         a.collapsed(data-toggle="collapse" data-parent="#accordion-1" href="#collapse-1")
+//-         //-           .fa.fa-plus
+//-         //-     #collapse-1.panel-collapse.collapse
+//-         //-       .panel-body
+//-         //-         ul
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1242.php") 網球拍
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1243.php") 壁球拍
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1244.php") 球拍袋
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1245.php") 運動鞋子
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1246.php") 運動服飾
+//-         //-           li
+//-                     a(href="/m/2000-1813-1247.php") 耗材&道具
+//-         //- .panel.panel-default
+//-         //-   .panel-heading
+//-         //-     .panel-title
+//-         //-       a(href="/m/2000-1813-1241.php") INFIN
+//-         //-       a.collapsed(data-toggle="collapse" data-parent="#accordion-1" href="#collapse-2")
+//-         //-         .fa.fa-plus
+//-         //-   #collapse-2.panel-collapse.collapse
+//-         //-     .panel-body
+//-         //-       ul
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1248.php") 戶外休閒/運動商品
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1249.php") 電腦包/後揹包/行李箱
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1250.php") 餐廚刀具
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1251.php") 護膚保養/沐浴洗髮
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1252.php") 時尚墨鏡/手錶
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1253.php") 居家香氛
+//-     main.col-sm-9.col-xs-12.append
+//-       | ===MODULE===

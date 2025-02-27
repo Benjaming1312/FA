@@ -1,0 +1,44 @@
+.banner.page-banner
+  // margin-top: 118px
+  @media #{$mobile}
+    margin-top: 89px
+    padding: 0
+  .row
+    position: relative
+  .img
+    padding: 0
+    img
+      width: 100%
+  .text
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    .content
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
+    .title
+      +title
+      // color: #3c4757
+      border-bottom: 0
+      color: white
+      font-size: 48px
+      letter-spacing: .1rem
+      @media #{$mobile}
+        font-size: 24px
+      // &::before
+      //   content: ''
+      //   display: inline-block
+      //   background: url(#{$url}page-title-icon.svg) center center no-repeat
+      //   background-size: contain
+      //   $w: 30px
+      //   width: $w
+      //   height: $w
+      //   position: relative
+      //   top: 2.5px
+      //   margin-right: 15px

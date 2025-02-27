@@ -1,0 +1,169 @@
+=text
+  color: $color-b
+  font-size: 15px
+  font-weight: 400
+  letter-spacing: 0rem
+=sub_text
+  font-size: 14px
+  color: white
+  font-weight: 500
+  letter-spacing: 0
+  +trans
+  &:hover
+    background: none
+    opacity: 0.6
+
+
+.navbar.navbar.navbar #navbar > .navbar-nav
+  >li
+    margin: 0
+    // &:hover
+    &.logo
+      @media screen and (min-width: 768px)
+        margin-top: -20px
+        margin-left: 0
+        margin-right: 0
+      a
+        padding: 0
+        &::after
+          display: none
+    a
+      text-transform: initial
+      +trans
+      @media screen and (min-width: 768px)
+        white-space: nowrap
+      &:hover
+        opacity: 0.5
+    >a
+      margin: 0 // Clear mshop default
+      padding: 0 // Clear mshop default
+      border: 0 // Clear mshop default
+      background: none
+      text-align: center
+      +text
+      +trans
+      @media screen and (min-width: 768px)
+        padding: 0 0px // 選單間距
+        padding-bottom: 0px
+        position: relative
+        top: 3.25px
+      @media #{$mobile}
+        padding: 7.5px 0
+        text-align: center
+      &:hover
+        &::after
+          transform: translateY(0)
+          opacity: 1
+  .dropdown
+    &:hover
+      .dropdown-menu
+        @media screen and (min-width: 768px)
+          display: block
+    .dropdown-menu
+      border: 0 // Clear mshop default
+      box-shadow: none // Clear mshop default
+      background: none // Clear mshop default
+      min-width: initial // Clear mshop default
+      border-radius: 0
+      padding: 15px
+      @media screen and (min-width: 768px)
+        +box-shadow
+        top: 30px
+        background: url(#{$url}navbar-bg.png)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+      @media #{$mobile}
+        background: rgba(white, .3)
+      >li
+        >a
+          padding: 0 // Clear mshop default
+          background: none // Clear mshop default
+          +sub_text
+          padding: 7.5px 0
+          text-align: center
+          +trans
+
+// .navbar-nav
+//   & > li
+//     &:last-child
+//       >a
+//         padding-right: 0
+//     & > a
+//       +text-module
+//       position: relative
+//       @media screen and (min-width: 768px)
+//         padding: 0 2.8vw
+//         white-space: nowrap
+//       @media #{$pad-horizantal}
+//         padding: 0 2vw
+//       @media #{$pad-vertical}
+//         padding: 0 1vw
+//       @media #{$mobile}
+//         border: 0!important
+
+//   // 帳戶，購物車，搜尋
+//   li.member
+//     @media screen and (min-width: 768px)
+//       display: flex
+//       flex-wrap: nowrap
+//     a
+//       +text-module
+//       padding: 0
+//       white-space: nowrap
+//       font-size: 16px
+//       display: inline-block
+//       @media #{$mobile}
+//         border: 0
+//     .content
+//       @media screen and (min-width: 768px)
+//         white-space: nowrap
+//         margin-left: 15px
+//       .svg
+//         top: 5px
+//         position: relative
+//         margin-right: 5px
+
+// // dropdown-menu
+// .navbar-nav > li
+//   .dropdown-menu
+//     padding: 7.5px 15px
+//     background: rgba(white, .3)!important
+//     border: 0
+//     box-shadow: none
+//     @media #{$mobile}
+//       padding-left: 7.5px
+//       padding-right: 7.5px
+//       margin-bottom: 15px
+//     li
+//       margin-bottom: 7.5px
+//       &:last-child
+//         @media #{$mobile}
+//           margin-bottom: 0
+//         a
+//           @media #{$mobile}
+//             margin-bottom: 0
+//     a
+//       +text-module
+//       font-size: 18px
+//       color: $color-brown
+//       padding: 0
+//       margin: 0
+//       white-space: nowrap
+//       @media #{$mobile}
+//         padding-left: 7.5px!important
+//         padding-right: 7.5px!important
+//         color: white
+//       &:hover
+//         background: none
+//   &:hover,
+//   &.open
+//     >.dropdown-menu
+//       @media screen and (min-width: 768px)
+//         display: block
+//         right: initial
+//         left: 1vw       
+        
+//   &.open
+//     >.dropdown-menu
+//       @media #{$mobile}

@@ -1,0 +1,61 @@
+// 三層選單
+.dropdown-submenu 
+  position: relative!important
+  >a
+    &::after
+      content: ''
+      display: inline-block
+      +tr3($color-b, $color-n, $color-n, $color-n)
+      transform: rotate(-90deg)
+      border-width: 6px
+      float: right
+      position: absolute
+      right: 0
+      top: 15px
+      @media #{$mobile}
+        transform: rotate(0deg)
+        right: 5px
+
+
+.dropdown-submenu
+  &:hover
+    @media screen and (min-width: 768px)
+      .dropdown-menu
+        display: block!important
+  &.open
+    @media #{$mobile}
+      .dropdown-menu
+        display: block!important
+      // @media #{$mobile}
+      //   position: static
+    // .sub-toggle
+    //   @media #{$mobile}
+    //     background-color: #000!important
+  .dropdown-menu
+    position: absolute
+    top: 0!important
+    // right: 100%!important
+    left: 100%!important
+    margin-top: -1px
+    display: none!important
+    @media #{$mobile}
+      position: static
+    //   margin: 0!important
+    //   width: 100%!important
+    //   display: block!important
+
+.dropdown-menu 
+  overflow: initial
+  &.scroll
+    @media #{$mobile}
+      filter: drop-shadow(7px 7px 5px rgba(#000, .3))
+    .navbar2
+      @media screen and (min-width: 768px)
+        height: 0
+        overflow: hidden
+        margin: 0
+        padding: 0
+    .navbar-header
+      @media screen and (min-width: 768px)
+        padding-top: 10px
+        padding-bottom: 10px

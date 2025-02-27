@@ -1,0 +1,247 @@
+a
+  &:hover,
+  &:focus
+    outline: 0
+    text-decoration: none
+html
+  overflow-x: hidden
+body
+  background: url(#{$url}body-bg.png)
+  background-repeat: repeat
+  background-position: center
+.langbar
+  display: none
+
+.svg
+  display: inline-block
+  background-size: contain!important
+  background-repeat: no-repeat!important
+  background-position: center!important
+
+.text-green
+  color: $color-green
+.text-blue
+  color: $color-blue
+
+=bg-grey
+  background: #f2f2f3
+=max-width
+  max-width: 1100px
+  margin-left: auto
+  margin-right: auto
+
+=box-shadow
+  box-shadow: 7px 7px 15px -3px rgba(#221e1f, .25)
+=text-shadow
+  text-shadow: 1px 1px 30px rgba(#000, 1)
+=trans
+  transition: $trans
+
+$btn_color: #005e7b
+=btn
+  border-radius: 0
+  border: 0
+  font-family: SourceHanSansTW, Regular-B5pc-H, "Noto Sans TC","微軟正黑體","sans-serif"
+  font-size: 16px
+  letter-spacing: 0.8px
+  padding: 7.5px 30px
+  // box-shadow: 7px 7px 15px -1px rgba(#000, .3)
+  position: relative
+  z-index: 1
+  +trans
+  background: $btn_color
+  color: white
+  border: 1px solid $btn_color
+  span
+    color: white
+    font-size: 16px
+    +trans
+  &:hover,
+  &:focus,
+  &:active
+    color: $btn_color
+    background: white
+    span
+      color: $btn_color
+
+=title
+  color: #343333
+  font-size: 26px
+  font-weight: 500
+  text-align: center
+  letter-spacing: 5px
+  margin-bottom: 15px 
+  @media #{$mobile}
+    margin-bottom: 15px
+
+=sub-title
+  font-size: 18px
+  color: #777ca8
+  text-align: center
+  font-weight: 500
+  letter-spacing: 3.5px
+  @media #{$mobile}
+    margin-bottom: 15px
+.page
+  *
+    color: #444
+
+.page,
+.module-detail
+  .title
+    +title
+    margin-bottom: 60px
+    @media #{$mobile}
+      margin-bottom: 30px
+  p, figcaption
+    font-size: 16px
+    line-height: 3rem
+    margin-bottom: 30px
+    color: #444
+    letter-spacing: 0
+    @media #{$mobile}
+      margin-bottom: 15px
+  >.row
+    +max-width
+    margin-left: auto
+    margin-right: auto
+  ul
+    padding-left: 20px
+    margin-bottom: 30px
+  a
+    font-size: 16px
+    border-bottom: 1px solid $color-green
+  small
+    font-size: 16px
+
+.mbtn.mbtn,
+.btn.btn
+  +btn
+//   border-color: $color-blue
+//   margin-left: auto
+//   margin-right: auto
+//   background: $color-blue
+//   color: white
+//   span
+//     color: white
+//     +trans
+//   &:hover
+//     background: none
+//     color: $color-blue
+//     span
+//       color: $color-blue
+
+body:not(.page_mobilehome)
+  // background: #eaeaea
+  // background: url(#{$url}section-4-bg.png) center center repeat-y
+  // background-size: contain
+
+.module-
+  +max-width
+  .msg
+    margin-bottom: 15px
+    *
+      color: $color-brown-l
+  .listBS
+    margin: 0
+    @media #{$mobile}
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+  .d-item
+    padding: 0.5px
+    &:hover
+      .d-img
+        img
+          transform: scale(1.2)
+          opacity: 0.5
+    .d-img
+      position: relative
+      overflow: hidden
+      img
+        +trans
+        transition-duration: .7s
+    .mbox
+      background: none
+      text-align: center
+      padding-bottom: 0px
+    .d-txt
+      h5
+        margin-bottom: 15px
+      a
+        font-size: 16px
+        color: $color-b
+    .mpro-price
+      *
+        font-size: 14px
+    .mpro-btns
+      margin-top: 15px
+      .mbtn
+        +btn
+        background: $color-yellow
+        border-color: $color-yellow
+        color: white
+        &:hover
+          color: $color-yellow
+          background: white
+    .mbtn
+      font-size: 14px
+      padding: 3.5px 15px
+      background: $color-brown-d
+      border: 0
+      font-weight: 300
+      &:hover
+        background: rgba($color-brown, .7)
+        color: white
+        opacity: 1      
+
+.module-title,
+.mt
+  text-align: center
+  margin-bottom: 30px
+  padding-bottom: 30px
+  // border-bottom: 1px solid rgba(#9fa0a0, .5)
+  @media #{$mobile}
+    padding-bottom: 15px
+  h4
+    color: $color-blue
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 7.5px
+    text-align: center
+    letter-spacing: 0
+    margin-bottom: 3.25px
+    border-bottom: 2px solid $color-blue
+    display: inline-block
+    padding-bottom: 7.5px
+    padding-left: 7.5px
+    padding-right: 7.5px
+  h5
+    font-size: 20px
+    color: #005e7b
+    letter-spacing: 0.35rem
+    text-align: center
+    margin-top: 0
+
+
+// .page-title
+//   margin-top: 30px
+//   margin-bottom: 30px
+//   @media #{$mobile}
+//     margin-top: 15px
+//     margin-bottom: 15px
+//   h4.title
+//     +title
+//     margin-top: 0
+//     margin-bottom: 0
+//     line-height: 45px
+//     @media #{$mobile}
+//       margin-bottom: 0
+//   .sub-title
+//     +sub-title
+//     color: #ed837d
+//     margin-top: 15px
+//     letter-spacing: 0.2rem
+//     @media #{$mobile}
+//       line-height: 30px
+//       font-size: 20px

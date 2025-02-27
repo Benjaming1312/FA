@@ -1,0 +1,170 @@
+// 主色系設定
+$color-1: #66ccff
+$color-2: #f39800
+$color-3: #00913a
+$color-4: #ffb600
+$color-5: #ea5514
+$color-n: transparent
+$color-brown: #3b2314
+$color-brown-l: #968d85
+$color-brown-d: #343333
+$color-b: #545148
+$color-b2: #595757
+$color-menu: #f1efea
+$color-red: #c00d23
+$color-red-2: #a94442
+$color-blue: #00559c
+$color-blued: #033557
+$color-orange: #ed837d
+$color-yellow: #e0a55f
+$color-grey: #898989
+$color-gray: #898989
+$color-green: #01787e
+$color-gorden: #c68f32
+$color-skyblue: #339dd1
+$color-purple: #777ca8
+/*RWD*/
+$mobile: "screen and (max-width:767px)"
+$pad: "(min-width:768px) and (max-width:991px)"
+$mini-pc: "(min-width: 992px) and (max-width: 1199px)"
+$pad-pc: "(min-width:768px)"
+$pad-vertical: "only screen and (min-width: 768px) and (orientation: 1024px)"
+$pad-horizantal: "only screen and (min-width: 1024px) and (orientation: 1366px)"
+
+// 字體
+// -宋體組
+$fm-1: "FangSong","LiSong Pro Light","STFangsong","sans-serif"
+// 標楷體
+$fm-kai: "DFKai-sb","標楷體","sans-serif"
+
+$fm-proximNova: "ProximaNova", "微軟正黑體","sans-serif" // google
+$fm-ms: "Microsoft JhengHei ", "微軟正黑體","sans-serif" // google
+$fm-google: "Noto Sans TC","微軟正黑體","Microsoft JhengHei", "Microsoft YaHei", Tohoma, Arial, "sans-serif" // google
+$fm-google-FS: 'cwTeXFangSong', serif // 仿宋
+$fm-gogole-Kai: 'cwTeXKai', serif // 楷體
+$fm-gogole-Ming: 'cwTeXMing', serif // 明體
+$fm-gogole-Ming: 'cwTeXYen', sans-serif // 園體
+
+// 雅黑
+$fm-cn: "Microsoft YaHei","SimHei","LiHei Pro Medium","SimHei","sans-serif"
+
+
+@font-face 
+	font-family: ProximaNova
+	src: url(/dist/css/proxima-nova-thin.woff) format("woff")
+	font-weight: 100
+	font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-light.woff) format("woff")
+    font-weight: 300
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-regular.woff) format("woff")
+    font-weight: 400
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-semibold.woff) format("woff")
+    font-weight: 600
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-bold.woff) format("woff")
+    font-weight: 700
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-extrabold.woff) format("woff")
+    font-weight: 800
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-black.woff) format("woff")
+    font-weight: 900
+    font-style: normal
+
+
+
+// 三角形（上·右·下·左）
+@mixin tr3($color_1,$color_2,$color_3,$color_4) 
+	border-width: .5em
+	border-style: solid solid solid solid
+	border-color: $color_1 $color_2 $color_3 $color_4
+
+// 圓型 (寬·高·顏色)
+@mixin circle($wh,$color) 
+	width: $wh
+	height: $wh
+	border-radius: 50%
+	background: $color
+
+// 斜線（寬度·主色·副色）
+@mixin slash($linewidth,$color_1,$color_1_2) 
+	background-color: $color_1
+	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, $color_1_2), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, $color_1_2),color-stop(.75, $color_1_2), color-stop(.75, transparent),to(transparent))
+	-webkit-background-size: $linewidth
+
+// 橫線（高度·主色·副色）
+@mixin hline($linewidth,$color_1,$color_1_2) 
+	background-color: $color_1
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, $color_1_2), color-stop(.5, transparent), to(transparent))
+	-webkit-background-size: $linewidth
+
+// 直線（寬度·主色·副色）
+@mixin sline($linewidth,$color_1,$color_1_2)
+	background-color: $color_1
+	background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, $color_1_2), color-stop(.5, transparent), to(transparent))
+	-webkit-background-size: $linewidth
+
+// 點點背景（點的大小·點的顏色·背景顏色）
+@mixin pline($linewidth,$color_1,$color_1_2) 
+	background-color: $color_1
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, $color_1_2), to($color_1_2)),-webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, $color_1_2), to($color_1_2))
+	-webkit-background-size: $linewidth
+
+// 漸層上下左右方向
+// 變數$linear的地方填寫 to right || to bottom
+@mixin linear-gradient($linear, $fromColor, $toColor)
+	background: linear-gradient($linear, $fromColor, $toColor)
+// 漸層從中央擴散
+// 變數$radial的地方填寫 ellipse || circle
+@mixin radial-gradient($radial, $fromColor, $toColor)
+	background: radial-gradient($radial, $fromColor, $toColor)
+a
+	&:hover,&:focus,&:focus
+		text-decoration: none!important
+		outline: none!important
+
+*
+	font-family: $fm-google
+	font-size: 16px
+	color: $color-b
+	font-weight: normal
+	letter-spacing: 1px
+
+[class^="icon-"], [class*=" icon-"]
+	font-family: 'icomoon'!important
+
+@mixin idx-h3-title
+	font-size: 26px
+	@media #{$mobile}
+		margin-top: 1em
+@mixin idx-h3-sub-title
+	font-size: 22px
+	margin-top: 0.5em
+	color: $color-blue
+
+$url: '/FA/images/'
+$trans: .3s ease-in-out
+
+@for $i from 10 through 100
+	.fz#{$i}
+		font-size: #{$i}px

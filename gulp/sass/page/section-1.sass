@@ -1,0 +1,72 @@
+h3.text-center
+  color: #1c415f
+  margin: 0
+  font-size: 24px
+  font-weight: 500
+  margin-bottom: 30px
+h4.text-center
+  color: #000000
+  font-weight: 400
+  line-height: 30px
+
+.idx.section-1
+  @media screen and (min-width: 768px)
+    padding: 60px 0 30px
+  @media #{$mobile}
+    padding: 30px 0px
+  p.text-center
+    color: #000000
+    font-weight: 400
+    line-height: 30px
+    @media screen and (min-width: 768px)
+      padding-bottom: 30px
+    @media #{$mobile}
+      padding-bottom: 30px
+  .container
+    width: 100%
+    background: #f5f3f0
+    max-width: 100%
+    .info
+      +max-width
+      padding: 60px 0
+      @media screen and (min-width: 768px)
+        display: flex
+        flex-wrap: wrap
+      @media #{$mobile}
+        padding: 30px 0
+    .col-sm-4
+      @media #{$mobile}
+        margin-bottom: 30px
+    figure
+      background: white
+      padding: 20px
+      border-radius: 30px
+      height: 100%
+      img
+        width: 100%
+      h4
+        text-align: center
+        color: #1c415f
+        font-weight: 500
+        margin: 15px 0
+        font-size: 16px
+      ul
+        padding-left: 20px
+      p, li
+        font-size: 14px
+        font-weight: 400
+        color: #000000
+        line-height: 30px
+        margin-bottom: 7.5px
+        letter-spacing: 0
+        margin-bottom: 0
+    p.text-center
+      padding-top: 60px
+      padding-bottom: 0
+      margin-bottom: 0
+      @media #{$mobile}
+        padding-top: 30px
+      .svg
+        +trans
+        &:hover
+          opacity: 0.6
